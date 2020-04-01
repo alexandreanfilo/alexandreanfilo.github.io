@@ -1,0 +1,364 @@
+{
+   "columns": [
+      {
+         "dataField": "pessoa_id",
+         "caption": "ID",
+         "dataType": "number",
+         "format": {
+            "type": "fixedPoint",
+            "precision": 0
+         },
+         "visible": true
+      },
+      {
+         "dataField": "nome",
+         "caption": "Nome",
+         "visible": true,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "tipo_pessoa_id",
+         "caption": "Tipo pessoa (id)",
+         "visible": false,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "tipo_pessoa",
+         "caption": "Tipo pessoa",
+         "visible": true,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "doctos",
+         "caption": "Documentos",
+         "visible": true,
+         "dataType": "string",
+         "encodeHtml": false,
+         "width": "auto"
+      },
+      {
+         "dataField": "data_nascimento",
+         "caption": "Data nascimento",
+         "visible": true,
+         "dataType": "date",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "pais_id",
+         "caption": "País (id)",
+         "visible": false,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "pais_nome",
+         "caption": "País",
+         "visible": true,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "endereco",
+         "caption": "Endereço",
+         "visible": true,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "complemento",
+         "caption": "Complemento",
+         "visible": false,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "bairro",
+         "caption": "Bairro",
+         "visible": true,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "cidade_id",
+         "caption": "Cidade (id)",
+         "visible": false,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "cidade_nome",
+         "caption": "Cidade",
+         "visible": true,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "uf",
+         "caption": "UF",
+         "visible": true,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "uf_nome",
+         "caption": "UF (nome)",
+         "visible": false,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "cep",
+         "caption": "CEP",
+         "visible": true,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "tel_celular",
+         "caption": "Telefone (celular)",
+         "visible": true,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "tel_comercial",
+         "caption": "Telefone (comercial)",
+         "visible": true,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "email",
+         "caption": "Email",
+         "visible": true,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "grupo_acesso",
+         "caption": "Grupo Acesso",
+         "visible": false,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "observacao",
+         "caption": "Observação",
+         "visible": true,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "ativo",
+         "caption": "Ativo",
+         "dataType": "boolean",
+         "falseText": "Não",
+         "trueText": "Sim",
+         "showEditorAlways": false,
+         "visible": true,
+         "encodeHtml": false
+      },
+      {
+         "dataField": "autoridade",
+         "caption": "Autoridade",
+         "dataType": "boolean",
+         "falseText": "Não",
+         "trueText": "Sim",
+         "showEditorAlways": false,
+         "visible": true,
+         "encodeHtml": false
+      },
+      {
+         "dataField": "presente",
+         "caption": "Presente",
+         "dataType": "date"
+      },
+      {
+         "dataField": "empresa_id",
+         "caption": "Empresa (id)",
+         "visible": false,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "empresa_nome",
+         "caption": "Empresa (nome)",
+         "visible": true,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "empresa_cnpj",
+         "caption": "Empresa (CNPJ)",
+         "visible": true,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "cartao",
+         "caption": "Cartão(Número)",
+         "visible": true,
+         "dataType": "string",
+         "encodeHtml": false,
+         "width": "auto"
+      },
+      {
+         "dataField": "tem_foto",
+         "caption": "Foto",
+         "dataType": "boolean",
+         "falseText": "Não",
+         "trueText": "Sim",
+         "showEditorAlways": false,
+         "visible": true,
+         "encodeHtml": false
+      },
+      {
+         "dataField": "tem_bio",
+         "caption": "Biometria",
+         "dataType": "boolean",
+         "falseText": "Não",
+         "trueText": "Sim",
+         "showEditorAlways": false,
+         "visible": true,
+         "encodeHtml": false
+      },
+      {
+         "dataField": "tem_cartao",
+         "caption": "Cartão",
+         "dataType": "boolean",
+         "falseText": "Não",
+         "trueText": "Sim",
+         "showEditorAlways": false,
+         "visible": true,
+         "encodeHtml": false
+      },
+      {
+         "dataField": "tem_doc",
+         "caption": "Possui documentos",
+         "dataType": "boolean",
+         "falseText": "Não",
+         "trueText": "Sim",
+         "showEditorAlways": false,
+         "visible": true,
+         "encodeHtml": false
+      },
+      {
+         "dataField": "aprovado",
+         "caption": "Aprovado (id)",
+         "visible": false,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "aprovado_desc",
+         "caption": "Aprovado",
+         "visible": false,
+         "dataType": "string",
+         "encodeHtml": false,
+         "width": "auto"
+      },
+      {
+         "dataField": "motivo_aprovado",
+         "caption": "Motivo aprovação",
+         "visible": false,
+         "dataType": "string",
+         "encodeHtml": false,
+         "width": "auto"
+      },
+      {
+         "dataField": "cpf",
+         "caption": "CPF",
+         "visible": false,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "cnh_numero",
+         "caption": "CNH",
+         "visible": false,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "cnh_categoria",
+         "caption": "CNH (categoria)",
+         "visible": false,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "cnh_validade",
+         "caption": "CNH (validade)",
+         "dataType": "date"
+      },
+      {
+         "dataField": "cnh_moop",
+         "caption": "MOOP",
+         "dataType": "boolean",
+         "falseText": "Não",
+         "trueText": "Sim",
+         "showEditorAlways": false,
+         "visible": true,
+         "encodeHtml": false
+      },
+      {
+         "dataField": "user_insert",
+         "caption": "Inserido por",
+         "visible": true,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "date_insert",
+         "caption": "Inserido em",
+         "visible": true,
+         "dataType": "datetime",
+         "format": "dd/MM/yyyy HH:mm:ss"
+      },
+      {
+         "dataField": "user_update",
+         "caption": "Alterado por",
+         "visible": true,
+         "dataType": "string",
+         "groupIndex": null,
+         "alignment": "left"
+      },
+      {
+         "dataField": "date_update",
+         "caption": "Alterado em",
+         "visible": true,
+         "dataType": "datetime",
+         "format": "dd/MM/yyyy HH:mm:ss"
+      }
+   ]
+}

@@ -1,0 +1,435 @@
+{
+   "root": [
+      {
+         "type": "Group",
+         "children": [
+            {
+               "type": "Group",
+               "tag": "documentos",
+               "options": {
+                  "caption": "Documentos",
+                  "colSpan": 11,
+                  "colCount": 12
+               },
+               "children": []
+            },
+            {
+               "type": "Group",
+               "options": {
+                  "colCount": 6,
+                  "colSpan": 6
+               },
+               "children": [
+                  {
+                     "type": "Template",
+                     "options": {
+                        "template": "validacaoTemplate",
+                        "component": "self://validacaoComponent",
+                        "params": {
+                           "dataModel": "self://"
+                        }
+                     }
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "type": "Group",
+         "options": {
+            "caption": "Dados Pessoais"
+         },
+         "children": [
+            {
+               "type": "TextBox",
+               "options": {
+                  "dataField": "nome",
+                  "colSpan": 6,
+                  "editorOptions": {
+                     "maxLength": 100
+                  }
+               }
+            },
+            {
+               "type": "DateBox",
+               "options": {
+                  "dataField": "data_nascimento",
+                  "colSpan": 2,
+                  "editorOptions": {
+                     "context": "self://",
+                     "displayForm": "dd/MM/yyyy",
+                     "min": "eval://new Date('1900-01-01 00:00:00')",
+                     "max": "eval://new Date()",
+                     "useMaskBehavior": true
+                  }
+               }
+            },
+            {
+               "type": "EmptyBox",
+               "options": {
+                  "colSpan": 4
+               }
+            },
+            {
+               "type": "SelectBox",
+               "options": {
+                  "dataField": "autoridade",
+                  "colSpan": 4,
+                  "editorOptions": {
+                     "displayExpr": "descricao",
+                     "valueExpr": "autoridade_id",
+                     "disabled": true,
+                     "dataSource": [
+                        {
+                           "autoridade_id": 0,
+                           "descricao": "Não"
+                        },
+                        {
+                           "autoridade_id": 1,
+                           "descricao": "Sim"
+                        }
+                     ]
+                  }
+               }
+            },
+            {
+               "type": "EmptyBox",
+               "options": {
+                  "colSpan": 8
+               }
+            },
+            {
+               "type": "Autocomplete",
+               "options": {
+                  "dataField": "empresa_search",
+                  "modelField": "empresa_id",
+                  "colSpan": 6,
+                  "editorOptions": {
+                     "dataSource": "self://pessoaSource",
+                     "valueExpr": "display_name"
+                  }
+               }
+            },
+            {
+               "type": "EmptyBox",
+               "options": {
+                  "colSpan": 6
+               }
+            },
+            {
+               "type": "CheckBox",
+               "options": {
+                  "dataField": "ativo",
+                  "label": {
+                     "visible": false
+                  },
+                  "editorOptions": {
+                     "text": "Ativo",
+                     "disabled": true
+                  }
+               }
+            }
+         ]
+      },
+      {
+         "type": "Group",
+         "options": {
+            "caption": "Acesso"
+         },
+         "children": [
+            {
+               "type": "TagBox",
+               "options": {
+                  "dataField": "grupo_acesso_pessoa",
+                  "label": {
+                     "text": "Grupos de acesso"
+                  },
+                  "editorOptions": {
+                     "dataSource": "self://gruposSource",
+                     "displayExpr": "descricao",
+                     "valueExpr": "grupo_id",
+                     "onValueChanged": "self://acessoTagChanged"
+                  }
+               }
+            }
+         ]
+      },
+      {
+         "type": "TabGroup",
+         "options": {},
+         "children": [
+            {
+               "type": "Tab",
+               "options": {
+                  "title": "Endereço"
+               },
+               "children": [
+                  {
+                     "type": "Group",
+                     "options": {
+                        "caption": ""
+                     },
+                     "children": [
+                        {
+                           "type": "TextBox",
+                           "options": {
+                              "dataField": "cep",
+                              "colSpan": 2,
+                              "editorOptions": {
+                                 "mask": "00000-000",
+                                 "maxLength": 10,
+                                 "maskInvalidMessage": "CEP informado incorretamente."
+                              }
+                           }
+                        },
+                        {
+                           "type": "TextBox",
+                           "options": {
+                              "dataField": "endereco",
+                              "colSpan": 4,
+                              "editorOptions": {
+                                 "maxLength": 100
+                              }
+                           }
+                        },
+                        {
+                           "type": "TextBox",
+                           "options": {
+                              "dataField": "complemento",
+                              "colSpan": 4,
+                              "editorOptions": {
+                                 "maxLength": 100
+                              }
+                           }
+                        },
+                        {
+                           "type": "EmptyBox",
+                           "options": {
+                              "colSpan": 2
+                           }
+                        },
+                        {
+                           "type": "TextBox",
+                           "options": {
+                              "dataField": "bairro",
+                              "colSpan": 4,
+                              "editorOptions": {
+                                 "maxLength": 100
+                              }
+                           }
+                        },
+                        {
+                           "type": "Autocomplete",
+                           "options": {
+                              "dataField": "cidade_search",
+                              "modelField": "cidade_id",
+                              "colSpan": 3,
+                              "callback": "self://selectCidade",
+                              "editorOptions": {
+                                 "dataSource": "self://cidadeSource",
+                                 "valueExpr": "nome"
+                              }
+                           }
+                        },
+                        {
+                           "type": "TextBox",
+                           "options": {
+                              "dataField": "cidade.estado.descricao",
+                              "colSpan": 3,
+                              "editorOptions": {
+                                 "disabled": true,
+                                 "maxLength": 100
+                              }
+                           }
+                        },
+                        {
+                           "type": "TextBox",
+                           "options": {
+                              "dataField": "pais.descricao",
+                              "colSpan": 3,
+                              "editorOptions": {
+                                 "disabled": true,
+                                 "value": "Brasil"
+                              }
+                           }
+                        }
+                     ]
+                  }
+               ]
+            },
+            {
+               "type": "Tab",
+               "options": {
+                  "title": "Contatos"
+               },
+               "children": [
+                  {
+                     "type": "Group",
+                     "options": {
+                        "caption": ""
+                     },
+                     "children": [
+                        {
+                           "type": "TextBox",
+                           "options": {
+                              "dataField": "tel_comercial",
+                              "colSpan": 4,
+                              "editorOptions": {
+                                 "mask": "(00) 0000-0000",
+                                 "maxLength": 14,
+                                 "showMaskMode": "onFocus",
+                                 "useMaskedValue": true,
+                                 "maskInvalidMessage": "Telefone Comercial informado incorretamente."
+                              }
+                           }
+                        },
+                        {
+                           "type": "TextBox",
+                           "options": {
+                              "dataField": "tel_celular",
+                              "colSpan": 4,
+                              "editorOptions": {
+                                 "mask": "(00) 90000-0000",
+                                 "maxLength": 14
+                              }
+                           }
+                        },
+                        {
+                           "type": "EmptyBox",
+                           "options": {
+                              "colSpan": 4
+                           }
+                        },
+                        {
+                           "type": "TextBox",
+                           "options": {
+                              "dataField": "email",
+                              "colSpan": 8,
+                              "editorOptions": {
+                                 "maxLength": 100
+                              }
+                           }
+                        },
+                        {
+                           "type": "EmptyBox",
+                           "options": {
+                              "colSpan": 4
+                           }
+                        }
+                     ]
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "type": "Group",
+         "options": {
+            "caption": ""
+         },
+         "children": [
+            {
+               "type": "TextArea",
+               "options": {
+                  "dataField": "observacao",
+                  "colSpan": 12,
+                  "editorOptions": {
+                     "maxLength": 300
+                  }
+               }
+            }
+         ]
+      }
+   ],
+   "label": {
+      "nome": {
+         "text": "Nome",
+         "alignment": "left",
+         "visible": true
+      },
+      "cep": {
+         "text": "CEP",
+         "alignment": "left",
+         "visible": true
+      },
+      "data_nascimento": {
+         "text": "Data de Nascimento",
+         "alignment": "left",
+         "visible": true
+      },
+      "empresa_search": {
+         "text": "Empresa",
+         "alignment": "left",
+         "visible": true
+      },
+      "endereco": {
+         "text": "Endereço",
+         "alignment": "left",
+         "visible": true
+      },
+      "complemento": {
+         "text": "Complemento",
+         "alignment": "left",
+         "visible": true
+      },
+      "bairro": {
+         "text": "Bairro",
+         "alignment": "left",
+         "visible": true
+      },
+      "cidade_search": {
+         "text": "Cidade",
+         "alignment": "left",
+         "visible": true
+      },
+      "cidade.estado.descricao": {
+         "text": "Estado",
+         "alignment": "left",
+         "visible": true
+      },
+      "pais.descricao": {
+         "text": "País",
+         "alignment": "left",
+         "visible": true
+      },
+      "tel_comercial": {
+         "text": "Tel. Comercial",
+         "alignment": "left",
+         "visible": true
+      },
+      "tel_celular": {
+         "text": "Tel. Celular",
+         "alignment": "left",
+         "visible": true
+      },
+      "observacao": {
+         "text": "Observação",
+         "alignment": "left",
+         "visible": true
+      },
+      "email": {
+         "text": "Email",
+         "alignment": "left",
+         "visible": true
+      },
+      "autoridade": {
+         "text": "Autoridade",
+         "alignment": "left",
+         "visible": true
+      }
+   },
+   "required": [
+      "nome",
+      "pais_id",
+      "orgao_emissor",
+      "cidade.nome",
+      "cidade_search",
+      "cidade.estado.descricao",
+      "pais.descricao",
+      "empresa.nome",
+      "empresa.cnpj",
+      "autoridade",
+      "empresa_search",
+      "tipo_pessoa_id"
+   ]
+}

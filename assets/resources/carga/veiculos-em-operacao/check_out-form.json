@@ -1,0 +1,52 @@
+{
+   "$extends": "carga/veiculos-em-operacao/acao-form",
+   "$replace": {
+      "root": {
+         "field-group": {
+            "type": "Group",
+            "options": {
+               "caption": ""
+            },
+            "children": [
+               {
+                  "type": "DateBox",
+                  "options": {
+                     "dataField": "data_hora_liberacao",
+                     "colSpan": 6,
+                     "editorOptions": {
+                        "disabled": true,
+                        "displayFormat": "dd/MM/yyyy hh:mm"
+                     }
+                  }
+               },
+               {
+                  "type": "DateBox",
+                  "options": {
+                     "dataField": "data_hora_checkout",
+                     "colSpan": 6,
+                     "editorOptions": {
+                        "displayFormat": "dd/MM/yyyy hh:mm",
+                        "type": "datetime"
+                     }
+                  }
+               }
+            ]
+         }
+      }
+   },
+   "$append": {
+      "label": {
+         "data_hora_liberacao": {
+            "text": "Data/Hora Liberação",
+            "alignment": "left"
+         },
+         "data_hora_checkout": {
+            "text": "Data/Hora Checkout",
+            "alignment": "left"
+         }
+      },
+      "required": [
+         "data_hora_checkout"
+      ]
+   }
+}

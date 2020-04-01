@@ -1,0 +1,8 @@
+{
+   "application": "Recinto Alfandegado",
+   "version": "1.0.0-rc.27",
+   "options": {
+      "require_logoff": true,
+      "require_reload": true
+   }
+}

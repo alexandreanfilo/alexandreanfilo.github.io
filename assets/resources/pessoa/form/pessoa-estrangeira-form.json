@@ -1,0 +1,104 @@
+{
+   "$extends": "pessoa/form/pessoa-form",
+   "$replace": {
+      "root": {
+         "documentos": {
+            "type": "Group",
+            "options": {
+               "caption": "Documentos",
+               "colSpan": 11,
+               "colCount": 12
+            },
+            "children": [
+               {
+                  "type": "TextBox",
+                  "options": {
+                     "dataField": "passaporte",
+                     "colSpan": 4,
+                     "editorOptions": {
+                        "maxLength": 100,
+                        "disabled": "self://formComponent.editMode"
+                     }
+                  }
+               },
+               {
+                  "type": "DateBox",
+                  "options": {
+                     "dataField": "passaporte_data_validade",
+                     "colSpan": 2,
+                     "editorOptions": {
+                        "maxLength": 100,
+                        "width": "100%"
+                     }
+                  }
+               },
+               {
+                  "type": "Autocomplete",
+                  "options": {
+                     "context": "self://",
+                     "dataField": "passaporte_pais_search",
+                     "dataFieldId": "pais_id",
+                     "searchParam": "busca",
+                     "selectedItemClass": "import://Pais",
+                     "selectedItemDataFieldId": "pais_id",
+                     "call": "call://",
+                     "colSpan": 3,
+                     "callback": "self://selectPais",
+                     "editorOptions": {
+                        "valueExpr": "descricao_portugues",
+                        "showClearButton": true
+                     }
+                  }
+               },
+               {
+                  "type": "TextBox",
+                  "options": {
+                     "dataField": "passaporte_orgao_emissor",
+                     "colSpan": 2,
+                     "editorOptions": {
+                        "maxLength": 50,
+                        "disabled": true
+                     }
+                  }
+               },
+               {
+                  "type": "EmptyBox",
+                  "options": {
+                     "colSpan": 2
+                  }
+               }
+            ]
+         }
+      }
+   },
+   "$append": {
+      "label": {
+         "passaporte": {
+            "text": "Passaporte",
+            "alignment": "left",
+            "visible": true
+         },
+         "passaporte_data_validade": {
+            "text": "Validade",
+            "alignment": "left",
+            "visible": true
+         },
+         "passaporte_pais_search": {
+            "text": "País",
+            "alignment": "left",
+            "visible": true
+         },
+         "passaporte_orgao_emissor": {
+            "text": "Órgão Emissor",
+            "alignment": "left",
+            "visible": true
+         }
+      },
+      "required": [
+         "passaporte",
+         "passaporte_data_validade",
+         "passaporte_pais_search",
+         "passaporte_orgao_emissor"
+      ]
+   }
+}

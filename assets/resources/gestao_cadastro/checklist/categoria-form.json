@@ -1,0 +1,41 @@
+{
+   "root": [
+      {
+         "type": "Group",
+         "options": {
+            "caption": ""
+         },
+         "children": [
+            {
+               "type": "TextBox",
+               "options": {
+                  "dataField": "descricao",
+                  "colSpan": 12,
+                  "editorOptions": {}
+               }
+            },
+            {
+               "type": "TextArea",
+               "options": {
+                  "dataField": "observacao",
+                  "colSpan": 12,
+                  "editorOptions": {
+                     "maxLength": 100
+                  }
+               }
+            }
+         ]
+      }
+   ],
+   "label": {
+      "descricao": {
+         "text": "Descrição:",
+         "alignment": "left"
+      },
+      "observacao": {
+         "text": "Observação:",
+         "alignment": "left"
+      }
+   },
+   "required": []
+}

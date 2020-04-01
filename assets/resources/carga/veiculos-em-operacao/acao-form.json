@@ -1,0 +1,87 @@
+{
+   "root": [
+      {
+         "type": "Group",
+         "options": {
+            "caption": "Dados da GMO"
+         },
+         "children": [
+            {
+               "type": "TextBox",
+               "options": {
+                  "dataField": "cliente",
+                  "colSpan": 12,
+                  "editorOptions": {
+                     "disabled": true
+                  }
+               }
+            },
+            {
+               "type": "TextBox",
+               "options": {
+                  "dataField": "transportadora",
+                  "colSpan": 12,
+                  "editorOptions": {
+                     "disabled": true
+                  }
+               }
+            },
+            {
+               "type": "TextBox",
+               "options": {
+                  "dataField": "motorista",
+                  "colSpan": 12,
+                  "editorOptions": {
+                     "disabled": true
+                  }
+               }
+            },
+            {
+               "type": "TextBox",
+               "options": {
+                  "dataField": "placas",
+                  "colSpan": 6,
+                  "editorOptions": {
+                     "disabled": true
+                  }
+               }
+            },
+            {
+               "type": "TextBox",
+               "options": {
+                  "dataField": "containers",
+                  "colSpan": 6,
+                  "editorOptions": {
+                     "disabled": true
+                  }
+               }
+            },
+            {
+               "type": "Group",
+               "tag": "field-group",
+               "options": {
+                  "caption": ""
+               },
+               "children": []
+            },
+            {
+               "type": "TextArea",
+               "tag": "observacao",
+               "options": {
+                  "dataField": "observacao",
+                  "colSpan": 12,
+                  "editorOptions": {}
+               }
+            }
+         ]
+      }
+   ],
+   "label": {
+      "observacao": {
+         "text": "Observação",
+         "alignment": "left",
+         "visible": true
+      }
+   },
+   "required": []
+}

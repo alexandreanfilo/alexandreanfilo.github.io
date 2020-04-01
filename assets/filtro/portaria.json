@@ -1,0 +1,90 @@
+{
+   "root": {
+      "filtro": [
+         {
+            "dataField": "descricao",
+            "editorType": "dxTextBox",
+            "colSpan": 3,
+            "label": {
+               "text": "Descrição"
+            },
+            "editorOptions": {
+               "value": ""
+            }
+         },
+         {
+            "dataField": "nome",
+            "editorType": "dxTextBox",
+            "colSpan": 9,
+            "label": {
+               "text": "Nome"
+            },
+            "editorOptions": {
+               "value": ""
+            }
+         },
+         {
+            "dataField": "ale",
+            "editorType": "dxTextBox",
+            "colSpan": 12,
+            "label": {
+               "text": "Sobrenome"
+            },
+            "editorOptions": {
+               "value": ""
+            }
+         },
+         {
+            "dataField": "sel",
+            "editorType": "dxSelectBox",
+            "colSpan": 6,
+            "label": {
+               "text": "Select"
+            },
+            "editorOptions": {
+               "value": ""
+            }
+         },
+         {
+            "dataField": "sel2",
+            "editorType": "dxSelectBox",
+            "colSpan": 6,
+            "label": {
+               "text": "Select 2"
+            },
+            "editorOptions": {
+               "value": 55,
+               "valueExpr": "grade_id",
+               "displayExpr": "descricao"
+            }
+         },
+         {
+            "dataField": "pessoa_search",
+            "datafield_id": "pessoa_id",
+            "editorType": "dxAutocomplete",
+            "colSpan": "12",
+            "label": {
+               "text": "Pessoa"
+            },
+            "editorOptions": {
+               "valueExpr": "nome"
+            },
+            "model": {
+               "call": {
+                  "search_param": "search",
+                  "module": "M5003",
+                  "operation": "getPessoa"
+               },
+               "pessoa_id": 0,
+               "nome": ""
+            }
+         }
+      ],
+      "dataSource": {
+         "sel2": {
+            "module": "M5000_CGA",
+            "operation": "getGrade"
+         }
+      }
+   }
+}

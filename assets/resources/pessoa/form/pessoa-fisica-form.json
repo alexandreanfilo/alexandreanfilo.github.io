@@ -1,0 +1,64 @@
+{
+   "$extends": "pessoa/form/pessoa-form",
+   "$replace": {
+      "root": {
+         "documentos": {
+            "type": "Group",
+            "options": {
+               "caption": "Documentos",
+               "colSpan": 11,
+               "colCount": 12
+            },
+            "children": [
+               {
+                  "type": "TextBox",
+                  "options": {
+                     "dataField": "cpf_search",
+                     "colSpan": 4,
+                     "editorOptions": {
+                        "maxLength": 100,
+                        "mask": "000.000.000-00",
+                        "disabled": "self://formComponent.editMode"
+                     }
+                  }
+               },
+               {
+                  "type": "TextBox",
+                  "options": {
+                     "dataField": "cpf_orgao_emissor",
+                     "colSpan": 4,
+                     "editorOptions": {
+                        "disabled": true,
+                        "value": "SRF"
+                     }
+                  }
+               },
+               {
+                  "type": "EmptyBox",
+                  "options": {
+                     "colSpan": 4
+                  }
+               }
+            ]
+         }
+      }
+   },
+   "$append": {
+      "label": {
+         "cpf_search": {
+            "text": "CPF",
+            "alignment": "left",
+            "visible": true
+         },
+         "cpf_orgao_emissor": {
+            "text": "Órgão Emissor",
+            "alignment": "left",
+            "visible": true
+         }
+      },
+      "required": [
+         "cpf_search",
+         "cpf_orgao_emissor"
+      ]
+   }
+}

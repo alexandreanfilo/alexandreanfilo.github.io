@@ -1,0 +1,286 @@
+{
+   "root": [
+      {
+         "type": "Group",
+         "children": [
+            {
+               "type": "TextBox",
+               "options": {
+                  "dataField": "descricao",
+                  "colSpan": 12,
+                  "editorOptions": {
+                     "maxLength": 100
+                  }
+               }
+            },
+            {
+               "type": "SelectBox",
+               "options": {
+                  "dataField": "categoria",
+                  "colSpan": 12,
+                  "editorOptions": {
+                     "dataSource": "self://categorias",
+                     "displayExpr": "descricao"
+                  }
+               }
+            },
+            {
+               "type": "NumberBox",
+               "options": {
+                  "dataField": "ordem",
+                  "colSpan": 12,
+                  "editorOptions": {
+                     "min": 0,
+                     "step": 0
+                  }
+               }
+            },
+            {
+               "type": "Group",
+               "options": {
+                  "caption": "Tipo de Resposta"
+               },
+               "children": [
+                  {
+                     "type": "Group",
+                     "options": {
+                        "caption": ""
+                     },
+                     "children": [
+                        {
+                           "type": "CheckBox",
+                           "options": {
+                              "dataField": "conforme",
+                              "colSpan": 6,
+                              "editorOptions": {
+                                 "onValueChanged": "self://conformeChanged",
+                                 "text": "Conforme / Não conforme"
+                              }
+                           }
+                        },
+                        {
+                           "type": "CheckBox",
+                           "options": {
+                              "dataField": "nao_aplica",
+                              "colSpan": 6,
+                              "editorOptions": {
+                                 "disabled": true,
+                                 "text": "Não se aplica",
+                                 "onValueChanged": "self://naoAplicaChanged"
+                              }
+                           }
+                        }
+                     ]
+                  },
+                  {
+                     "type": "Group",
+                     "options": {
+                        "caption": "Valor de texto"
+                     },
+                     "children": [
+                        {
+                           "type": "CheckBox",
+                           "options": {
+                              "dataField": "valor_texto",
+                              "colSpan": 6,
+                              "editorOptions": {
+                                 "text": "Habilitar",
+                                 "onValueChanged": "self://valorTextoChanged"
+                              }
+                           }
+                        },
+                        {
+                           "type": "SelectBox",
+                           "options": {
+                              "dataField": "valor_texto_regra",
+                              "colSpan": 6,
+                              "editorOptions": {
+                                 "dataSource": "self://tipo_regras",
+                                 "displayExpr": "text",
+                                 "disabled": true,
+                                 "onValueChanged": "self://valorTextoRegraChanged",
+                                 "placeholder": "Se...",
+                                 "value": "",
+                                 "valueExpr": "value"
+                              }
+                           }
+                        },
+                        {
+                           "type": "NumberBox",
+                           "options": {
+                              "colSpan": 6,
+                              "dataField": "min_comment",
+                              "editorOptions": {
+                                 "disabled": true,
+                                 "min": 0
+                              }
+                           }
+                        },
+                        {
+                           "type": "NumberBox",
+                           "options": {
+                              "colSpan": 6,
+                              "dataField": "max_comment",
+                              "editorOptions": {
+                                 "disabled": true,
+                                 "min": 0
+                              }
+                           }
+                        }
+                     ]
+                  },
+                  {
+                     "type": "Group",
+                     "options": {
+                        "caption": "Lista de valores"
+                     },
+                     "children": [
+                        {
+                           "type": "CheckBox",
+                           "options": {
+                              "dataField": "multivalue",
+                              "colSpan": 6,
+                              "editorOptions": {
+                                 "onValueChanged": "self://multiChanged",
+                                 "text": "Habilitar"
+                              }
+                           }
+                        },
+                        {
+                           "type": "SelectBox",
+                           "options": {
+                              "dataField": "multivalue_regra",
+                              "colSpan": 6,
+                              "editorOptions": {
+                                 "dataSource": "self://tipo_regras",
+                                 "disabled": true,
+                                 "displayExpr": "text",
+                                 "onValueChanged": "self://multivalueRegraChanged",
+                                 "placeholder": "Se...",
+                                 "value": "",
+                                 "valueExpr": "value"
+                              }
+                           }
+                        },
+                        {
+                           "type": "TagBox",
+                           "options": {
+                              "dataField": "multivalue_values",
+                              "colSpan": 6,
+                              "editorOptions": {
+                                 "acceptCustomValue": true,
+                                 "dataSource": "self://valores",
+                                 "disabled": true,
+                                 "displayExpr": "valor",
+                                 "hint": "Digite o valor desejado e pressione enter para adicionar à lista de opções.",
+                                 "placeholder": "Digite os valores...",
+                                 "showClearButton": true,
+                                 "onCustomItemCreating": "self://multiValueCreated",
+                                 "onValueChanged": "self://multivalueValueChanged"
+                              }
+                           }
+                        },
+                        {
+                           "type": "CheckBox",
+                           "options": {
+                              "dataField": "multiselecao",
+                              "colSpan": 6,
+                              "editorOptions": {
+                                 "disabled": true,
+                                 "text": "Permite multiseleção",
+                                 "onValueChanged": "self://multiSelectChanged"
+                              }
+                           }
+                        }
+                     ]
+                  }
+               ]
+            },
+            {
+               "type": "RadioGroup",
+               "options": {
+                  "dataField": "restricao_bloqueio",
+                  "colSpan": 12,
+                  "editorOptions": {
+                     "dataSource": "self://restricao_bloqueio",
+                     "displayExpr": "text"
+                  }
+               }
+            },
+            {
+               "type": "TextArea",
+               "options": {
+                  "dataField": "observacao",
+                  "colSpan": 12,
+                  "editorOptions": {}
+               }
+            }
+         ]
+      }
+   ],
+   "label": {
+      "categoria": {
+         "text": "Categoria:",
+         "alignment": "left"
+      },
+      "conforme": {
+         "visible": false
+      },
+      "descricao": {
+         "text": "Descrição:",
+         "alignment": "left"
+      },
+      "min_coment": {
+         "text": "Comentário mínimo",
+         "alignment": "left"
+      },
+      "max_coment": {
+         "text": "Comentário máximo",
+         "alignment": "left"
+      },
+      "multiselecao": {
+         "visible": false
+      },
+      "multivalue": {
+         "text": "Status",
+         "alignment": "left"
+      },
+      "multivalue_values": {
+         "text": "Valores da lista",
+         "alignment": "left"
+      },
+      "nao_aplica": {
+         "visible": false
+      },
+      "restricao_bloqueio": {
+         "text": "Restrição/Bloqueio:",
+         "alignment": "left"
+      },
+      "multivalue_regra": {
+         "text": "Condição:",
+         "alignment": "left"
+      },
+      "valor_texto_regra": {
+         "text": "Condição:",
+         "alignment": "left"
+      },
+      "ordem": {
+         "text": "Ordem:",
+         "alignment": "left"
+      },
+      "observacao": {
+         "text": "Observação:",
+         "alignment": "left"
+      },
+      "valor_texto": {
+         "text": "Status",
+         "alignment": "left"
+      }
+   },
+   "required": [
+      "categoria",
+      "descricao",
+      "ordem",
+      "restricao_bloqueio"
+   ]
+}

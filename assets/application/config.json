@@ -1,0 +1,13 @@
+{
+  "modules": {
+    "cacesso": {
+      "socketUrl": "http://10.96.67.22:9091"
+    },
+    "carga": {
+      "mqttConfig": {
+        "mqttUrl": "10.109.66.240",
+        "mqttPort": "9001"
+      }
+    }
+  }
+}

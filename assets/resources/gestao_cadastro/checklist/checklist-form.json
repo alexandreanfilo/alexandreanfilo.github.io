@@ -1,0 +1,74 @@
+{
+   "root": [
+      {
+         "type": "Group",
+         "children": [
+            {
+               "type": "TextBox",
+               "options": {
+                  "dataField": "descricao",
+                  "colSpan": 12,
+                  "editorOptions": {
+                     "maxLength": 100
+                  }
+               }
+            },
+            {
+               "type": "TextArea",
+               "options": {
+                  "dataField": "observacao",
+                  "colSpan": 12,
+                  "editorOptions": {}
+               }
+            },
+            {
+               "type": "CheckBox",
+               "options": {
+                  "dataField": "ativo",
+                  "colSpan": 12,
+                  "editorOptions": {
+                     "disabled": true,
+                     "text": "Ativo"
+                  }
+               }
+            },
+            {
+               "type": "Group",
+               "options": {
+                  "caption": "Items"
+               },
+               "children": [
+                  {
+                     "type": "Template",
+                     "options": {
+                        "template": "itemsTemplate",
+                        "component": "self://itemsTemplate",
+                        "params": {
+                           "dataModel": "self://"
+                        }
+                     }
+                  }
+               ]
+            }
+         ]
+      }
+   ],
+   "label": {
+      "ativo": {
+         "visible": false
+      },
+      "descricao": {
+         "text": "Descrição",
+         "alignment": "left",
+         "visible": true
+      },
+      "observacao": {
+         "text": "Observação",
+         "alignment": "left",
+         "visible": true
+      }
+   },
+   "required": [
+      "descricao"
+   ]
+}

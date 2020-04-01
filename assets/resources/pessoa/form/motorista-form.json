@@ -1,0 +1,146 @@
+{
+   "$extends": "pessoa/form/pessoa-form",
+   "$replace": {
+      "root": {
+         "documentos": {
+            "type": "Group",
+            "options": {
+               "caption": "Documentos",
+               "colSpan": 11,
+               "colCount": 12
+            },
+            "children": [
+               {
+                  "type": "TextBox",
+                  "options": {
+                     "dataField": "cpf_search",
+                     "colSpan": 4,
+                     "editorOptions": {
+                        "maxLength": 100,
+                        "mask": "000.000.000-00",
+                        "disabled": "self://formComponent.editMode"
+                     }
+                  }
+               },
+               {
+                  "type": "TextBox",
+                  "options": {
+                     "dataField": "cpf_orgao_emissor",
+                     "colSpan": 4,
+                     "editorOptions": {
+                        "disabled": true,
+                        "value": "SRF"
+                     }
+                  }
+               },
+               {
+                  "type": "EmptyBox",
+                  "options": {
+                     "colSpan": 4
+                  }
+               },
+               {
+                  "type": "TextBox",
+                  "options": {
+                     "dataField": "cnh",
+                     "colSpan": 4,
+                     "editorOptions": {
+                        "maxLength": 100
+                     }
+                  }
+               },
+               {
+                  "type": "TextBox",
+                  "options": {
+                     "dataField": "cnh_categoria",
+                     "colSpan": 2,
+                     "editorOptions": {
+                        "maxLength": 2
+                     }
+                  }
+               },
+               {
+                  "type": "DateBox",
+                  "options": {
+                     "dataField": "cnh_data_validade",
+                     "colSpan": 2,
+                     "editorOptions": {
+                        "maxLength": 100,
+                        "width": "100%"
+                     }
+                  }
+               },
+               {
+                  "type": "TextBox",
+                  "options": {
+                     "dataField": "cnh_orgao_emissor",
+                     "colSpan": 3,
+                     "editorOptions": {
+                        "disabled": true,
+                        "maxLength": 100,
+                        "value": "DETRAN"
+                     }
+                  }
+               },
+               {
+                  "type": "CheckBox",
+                  "options": {
+                     "dataField": "mopp",
+                     "colSpan": 1,
+                     "editorOptions": {
+                        "text": "MOPP"
+                     }
+                  }
+               }
+            ]
+         }
+      }
+   },
+   "$append": {
+      "label": {
+         "cpf_search": {
+            "text": "CPF",
+            "alignment": "left",
+            "visible": true
+         },
+         "cpf_orgao_emissor": {
+            "text": "Órgão Emissor",
+            "alignment": "left",
+            "visible": true
+         },
+         "cnh": {
+            "text": "CNH",
+            "alignment": "left",
+            "visible": true
+         },
+         "cnh_categoria": {
+            "text": "Categoria",
+            "alignment": "left",
+            "visible": true
+         },
+         "cnh_data_validade": {
+            "text": "Validade",
+            "alignment": "left",
+            "visible": true
+         },
+         "cnh_orgao_emissor": {
+            "text": "Órgão Emissor",
+            "alignment": "left",
+            "visible": true
+         },
+         "mopp": {
+            "text": "",
+            "alignment": "left",
+            "visible": false
+         }
+      },
+      "required": [
+         "cpf_search",
+         "cpf_orgao_emissor",
+         "cnh",
+         "cnh_categoria",
+         "cnh_data_validade",
+         "cnh_orgao_emissor"
+      ]
+   }
+}

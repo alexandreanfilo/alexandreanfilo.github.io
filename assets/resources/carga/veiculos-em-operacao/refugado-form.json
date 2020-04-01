@@ -1,0 +1,67 @@
+{
+   "$extends": "carga/veiculos-em-operacao/acao-form",
+   "$replace": {
+      "root": {
+         "field-group": {
+            "type": "Group",
+            "options": {
+               "caption": ""
+            },
+            "children": [
+               {
+                  "type": "DateBox",
+                  "options": {
+                     "dataField": "data_hora_gate_in",
+                     "colSpan": 6,
+                     "editorOptions": {
+                        "disabled": true,
+                        "displayFormat": "dd/MM/yyyy hh:mm"
+                     }
+                  }
+               },
+               {
+                  "type": "DateBox",
+                  "options": {
+                     "dataField": "data_hora_ocorrencia",
+                     "colSpan": 6,
+                     "editorOptions": {
+                        "displayFormat": "dd/MM/yyyy hh:mm",
+                        "type": "datetime"
+                     }
+                  }
+               }
+            ]
+         },
+         "observacao": {
+            "type": "TextArea",
+            "options": {
+               "dataField": "motivo",
+               "colSpan": 12,
+               "editorOptions": {
+                  "maxLength": 300
+               }
+            }
+         }
+      }
+   },
+   "$append": {
+      "label": {
+         "data_hora_gate_in": {
+            "text": "Data/Hora Gate IN",
+            "alignment": "left"
+         },
+         "data_hora_ocorrencia": {
+            "text": "Data/Hora Ocorrência",
+            "alignment": "left"
+         },
+         "motivo": {
+            "text": "Motivo",
+            "alignment": "left"
+         }
+      },
+      "required": [
+         "data_hora_ocorrencia",
+         "motivo"
+      ]
+   }
+}

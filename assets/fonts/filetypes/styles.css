@@ -1,0 +1,553 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "filetypes";
+  src:url("fonts/filetypes.eot");
+  src:url("fonts/filetypes.eot?#iefix") format("embedded-opentype"),
+    url("fonts/filetypes.woff") format("woff"),
+    url("fonts/filetypes.ttf") format("truetype"),
+    url("fonts/filetypes.svg#filetypes") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "filetypes" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="filetype-"]:before,
+[class*=" filetype-"]:before {
+  font-family: "filetypes" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.filetype-3dm:before {
+  content: "\61";
+}
+.filetype-3ds:before {
+  content: "\62";
+}
+.filetype-3g2:before {
+  content: "\63";
+}
+.filetype-3gp:before {
+  content: "\64";
+}
+.filetype-7z:before {
+  content: "\65";
+}
+.filetype-aif:before {
+  content: "\66";
+}
+.filetype-apk:before {
+  content: "\67";
+}
+.filetype-ai:before {
+  content: "\68";
+}
+.filetype-aac:before {
+  content: "\69";
+}
+.filetype-app:before {
+  content: "\6a";
+}
+.filetype-asf:before {
+  content: "\6b";
+}
+.filetype-asp:before {
+  content: "\6c";
+}
+.filetype-aspx:before {
+  content: "\6d";
+}
+.filetype-cgi:before {
+  content: "\6e";
+}
+.filetype-cfm:before {
+  content: "\6f";
+}
+.filetype-cfg:before {
+  content: "\70";
+}
+.filetype-cer:before {
+  content: "\71";
+}
+.filetype-cdr:before {
+  content: "\72";
+}
+.filetype-cad:before {
+  content: "\73";
+}
+.filetype-cab:before {
+  content: "\74";
+}
+.filetype-bmp:before {
+  content: "\75";
+}
+.filetype-bin:before {
+  content: "\76";
+}
+.filetype-bat:before {
+  content: "\77";
+}
+.filetype-avi:before {
+  content: "\78";
+}
+.filetype-asx:before {
+  content: "\79";
+}
+.filetype-bak:before {
+  content: "\7a";
+}
+.filetype-class:before {
+  content: "\41";
+}
+.filetype-cpl:before {
+  content: "\42";
+}
+.filetype-cpp:before {
+  content: "\43";
+}
+.filetype-crx:before {
+  content: "\44";
+}
+.filetype-csr:before {
+  content: "\45";
+}
+.filetype-css:before {
+  content: "\46";
+}
+.filetype-csv:before {
+  content: "\47";
+}
+.filetype-cue:before {
+  content: "\48";
+}
+.filetype-cur:before {
+  content: "\49";
+}
+.filetype-dat:before {
+  content: "\4a";
+}
+.filetype-db:before {
+  content: "\4b";
+}
+.filetype-dbf:before {
+  content: "\4c";
+}
+.filetype-exe:before {
+  content: "\4d";
+}
+.filetype-eps:before {
+  content: "\4e";
+}
+.filetype-dds:before {
+  content: "\4f";
+}
+.filetype-elf:before {
+  content: "\50";
+}
+.filetype-dxf:before {
+  content: "\51";
+}
+.filetype-dwg:before {
+  content: "\52";
+}
+.filetype-dtd:before {
+  content: "\53";
+}
+.filetype-drv:before {
+  content: "\54";
+}
+.filetype-docx:before {
+  content: "\55";
+}
+.filetype-doc:before {
+  content: "\56";
+}
+.filetype-dmp:before {
+  content: "\57";
+}
+.filetype-dmg:before {
+  content: "\58";
+}
+.filetype-dll:before {
+  content: "\59";
+}
+.filetype-dem:before {
+  content: "\5a";
+}
+.filetype-fla:before {
+  content: "\30";
+}
+.filetype-flash:before {
+  content: "\31";
+}
+.filetype-flv:before {
+  content: "\32";
+}
+.filetype-fnt:before {
+  content: "\33";
+}
+.filetype-fon:before {
+  content: "\34";
+}
+.filetype-gam:before {
+  content: "\35";
+}
+.filetype-gbr:before {
+  content: "\36";
+}
+.filetype-ged:before {
+  content: "\37";
+}
+.filetype-gif:before {
+  content: "\38";
+}
+.filetype-gpx:before {
+  content: "\39";
+}
+.filetype-gz:before {
+  content: "\21";
+}
+.filetype-gzip:before {
+  content: "\22";
+}
+.filetype-hqz:before {
+  content: "\23";
+}
+.filetype-kml:before {
+  content: "\24";
+}
+.filetype-key:before {
+  content: "\25";
+}
+.filetype-jsp:before {
+  content: "\26";
+}
+.filetype-jpg:before {
+  content: "\27";
+}
+.filetype-jar:before {
+  content: "\28";
+}
+.filetype-iso:before {
+  content: "\29";
+}
+.filetype-indd:before {
+  content: "\2a";
+}
+.filetype-iff:before {
+  content: "\2b";
+}
+.filetype-ics:before {
+  content: "\2c";
+}
+.filetype-ico:before {
+  content: "\2d";
+}
+.filetype-icns:before {
+  content: "\2e";
+}
+.filetype-ibooks:before {
+  content: "\2f";
+}
+.filetype-html:before {
+  content: "\3a";
+}
+.filetype-kmz:before {
+  content: "\3b";
+}
+.filetype-lnk:before {
+  content: "\3c";
+}
+.filetype-log:before {
+  content: "\3d";
+}
+.filetype-lua:before {
+  content: "\3e";
+}
+.filetype-m3u:before {
+  content: "\3f";
+}
+.filetype-m4a:before {
+  content: "\40";
+}
+.filetype-m4v:before {
+  content: "\5b";
+}
+.filetype-mach-o:before {
+  content: "\5d";
+}
+.filetype-max:before {
+  content: "\5e";
+}
+.filetype-mdb:before {
+  content: "\5f";
+}
+.filetype-mdf:before {
+  content: "\60";
+}
+.filetype-mid:before {
+  content: "\7b";
+}
+.filetype-mim:before {
+  content: "\7c";
+}
+.filetype-mov:before {
+  content: "\7d";
+}
+.filetype-mp3:before {
+  content: "\7e";
+}
+.filetype-mp4:before {
+  content: "\5c";
+}
+.filetype-mpa:before {
+  content: "\e000";
+}
+.filetype-mpg:before {
+  content: "\e001";
+}
+.filetype-msg:before {
+  content: "\e002";
+}
+.filetype-msi:before {
+  content: "\e003";
+}
+.filetype-nes:before {
+  content: "\e004";
+}
+.filetype-obj:before {
+  content: "\e005";
+}
+.filetype-odb:before {
+  content: "\e006";
+}
+.filetype-odc:before {
+  content: "\e007";
+}
+.filetype-odf:before {
+  content: "\e008";
+}
+.filetype-odg:before {
+  content: "\e009";
+}
+.filetype-odi:before {
+  content: "\e00a";
+}
+.filetype-odp:before {
+  content: "\e00b";
+}
+.filetype-ods:before {
+  content: "\e00c";
+}
+.filetype-odt:before {
+  content: "\e00d";
+}
+.filetype-odt-1:before {
+  content: "\e00e";
+}
+.filetype-odx:before {
+  content: "\e00f";
+}
+.filetype-ogg:before {
+  content: "\e010";
+}
+.filetype-otf:before {
+  content: "\e011";
+}
+.filetype-otf-1:before {
+  content: "\e012";
+}
+.filetype-pages:before {
+  content: "\e013";
+}
+.filetype-pct:before {
+  content: "\e014";
+}
+.filetype-pdb:before {
+  content: "\e015";
+}
+.filetype-pdf:before {
+  content: "\e016";
+}
+.filetype-pif:before {
+  content: "\e017";
+}
+.filetype-pkg:before {
+  content: "\e018";
+}
+.filetype-pl:before {
+  content: "\e019";
+}
+.filetype-png:before {
+  content: "\e01a";
+}
+.filetype-pps:before {
+  content: "\e01b";
+}
+.filetype-ppt:before {
+  content: "\e01c";
+}
+.filetype-pptx:before {
+  content: "\e01d";
+}
+.filetype-ps:before {
+  content: "\e01e";
+}
+.filetype-psd:before {
+  content: "\e01f";
+}
+.filetype-pub:before {
+  content: "\e020";
+}
+.filetype-py:before {
+  content: "\e021";
+}
+.filetype-ra:before {
+  content: "\e022";
+}
+.filetype-rar:before {
+  content: "\e023";
+}
+.filetype-raw:before {
+  content: "\e024";
+}
+.filetype-rm:before {
+  content: "\e025";
+}
+.filetype-rom:before {
+  content: "\e026";
+}
+.filetype-rpm:before {
+  content: "\e027";
+}
+.filetype-rss:before {
+  content: "\e028";
+}
+.filetype-rtf:before {
+  content: "\e029";
+}
+.filetype-sav:before {
+  content: "\e02a";
+}
+.filetype-sdf:before {
+  content: "\e02b";
+}
+.filetype-sitx:before {
+  content: "\e02c";
+}
+.filetype-sj:before {
+  content: "\e02d";
+}
+.filetype-sql:before {
+  content: "\e02e";
+}
+.filetype-srt:before {
+  content: "\e02f";
+}
+.filetype-svg:before {
+  content: "\e030";
+}
+.filetype-swf:before {
+  content: "\e031";
+}
+.filetype-sys:before {
+  content: "\e032";
+}
+.filetype-tar:before {
+  content: "\e033";
+}
+.filetype-tex:before {
+  content: "\e034";
+}
+.filetype-tga:before {
+  content: "\e035";
+}
+.filetype-thm:before {
+  content: "\e036";
+}
+.filetype-tiff:before {
+  content: "\e037";
+}
+.filetype-tmp:before {
+  content: "\e038";
+}
+.filetype-torrent:before {
+  content: "\e039";
+}
+.filetype-ttf:before {
+  content: "\e03a";
+}
+.filetype-txt:before {
+  content: "\e03b";
+}
+.filetype-uue:before {
+  content: "\e03c";
+}
+.filetype-vb:before {
+  content: "\e03d";
+}
+.filetype-vcd:before {
+  content: "\e03e";
+}
+.filetype-vcf:before {
+  content: "\e03f";
+}
+.filetype-vob:before {
+  content: "\e040";
+}
+.filetype-wav:before {
+  content: "\e041";
+}
+.filetype-wmv:before {
+  content: "\e042";
+}
+.filetype-wpd:before {
+  content: "\e043";
+}
+.filetype-wps:before {
+  content: "\e044";
+}
+.filetype-wsf:before {
+  content: "\e045";
+}
+.filetype-xhtml:before {
+  content: "\e046";
+}
+.filetype-xlr:before {
+  content: "\e047";
+}
+.filetype-xls:before {
+  content: "\e048";
+}
+.filetype-xlsx:before {
+  content: "\e049";
+}
+.filetype-xml:before {
+  content: "\e04a";
+}
+.filetype-yuv:before {
+  content: "\e04b";
+}
+.filetype-zip:before {
+  content: "\e04c";
+}
